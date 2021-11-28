@@ -16,3 +16,15 @@ npm install "this installs libraries"
 # How to run
 
 expo/npm start
+
+# How to add changes to repo
+
+git add .
+
+git commit
+
+git push
+
+# How to pull new changes from repo
+
+git pull
