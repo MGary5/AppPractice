@@ -29,4 +29,4 @@ git push
 
 git pull
 
-dingus
+dingus mcbingus
