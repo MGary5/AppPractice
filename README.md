@@ -28,5 +28,3 @@ git push
 # How to pull new changes from repo
 
 git pull
-
-it be working 
