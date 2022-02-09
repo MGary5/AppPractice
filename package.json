@@ -10,6 +10,10 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.2.0",
+    "@react-navigation/material-bottom-tabs": "^6.1.1",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
     "expo": "~43.0.2",
     "expo-status-bar": "~1.1.0",
     "react": "17.0.1",
@@ -20,5 +24,17 @@
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "private": true
+  "private": true,
+  "description": "Practice app ya heard yuhhhhhhhhhhhhhhhhhhhh okayyyyyyyyyyy lets gyooooo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGary5/AppPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MGary5/AppPractice/issues"
+  },
+  "homepage": "https://github.com/MGary5/AppPractice#readme"
 }
