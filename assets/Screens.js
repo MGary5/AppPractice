@@ -15,13 +15,16 @@ import { Style, Colors } from "../style/styles";
 
   export const HomeScreen = () => (
       <ScreenContainer>
-        <View style = {styles.buttonContainer}>
-            <TouchableOpacity
-                title = "Favorite Artists"
-                
-            >
-            </TouchableOpacity>
-        </View>
+        <ImageBackground style = {styles.background}>
+            <View style = {styles.buttonContainer}>
+                <TouchableOpacity
+                    title = "Favorite Artists"
+                    style = {styles.favArtists}
+                >
+                    <Text style={styles.buttonText}>Favorite Artists</Text>
+                </TouchableOpacity>
+            </View>
+        </ImageBackground>
       </ScreenContainer>
   )
 
@@ -42,6 +45,12 @@ import { Style, Colors } from "../style/styles";
   )
 
   const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#303030"
+    },
     itemContainer: {
         justifyContent: "center",
         alignItems: "center",
@@ -61,5 +70,17 @@ import { Style, Colors } from "../style/styles";
         alignItems: "center",
         justifyContent: "center",
         padding: 20,
+      },
+      favArtists: {
+        flexDirection: "row",
+        width: "70%",
+        height: "15%",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#5a4ec7",
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        marginVertical: 10,
+        borderRadius: 5,
       }
   })
