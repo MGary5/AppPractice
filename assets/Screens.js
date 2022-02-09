@@ -34,25 +34,31 @@ import { NavigationContainer } from "@react-navigation/native";
 
   export const ProfileScreen = () => (
     <ScreenContainer>
+      <ImageBackground style = {styles.background}>
         <View>
       
         </View>
+      </ImageBackground>
     </ScreenContainer>
   )
 
   export const favoriteArtists = () => (
     <ScreenContainer>
+      <ImageBackground style = {styles.background}>
         <View>
       
         </View>
+      </ImageBackground>
     </ScreenContainer>
   );
 
   export const SettingScreen = () => (
     <ScreenContainer>
+        <ImageBackground style = {styles.background}>
         <View>
       
         </View>
+      </ImageBackground>
     </ScreenContainer>
   )
 

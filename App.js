@@ -20,19 +20,28 @@ const HomeStackScreen = () => (
 );
 
 const ProfileStackScreen = () => (
-  <ProfileStack.Navigator>
+  <ProfileStack.Navigator screenOptions={{
+      headerShown: false
+    }}
+  >
     <ProfileStack.Screen name = 'Profile' component = {ProfileScreen}/>
   </ProfileStack.Navigator>
 );
 
 const SettingStackScreen = () => (
-  <SettingStack.Navigator>
+  <SettingStack.Navigator screenOptions={{
+      headerShown: false
+    }}
+  >
     <SettingStack.Screen name = 'Settings' component = {SettingScreen}/>
   </SettingStack.Navigator>
 );
 
 const favArtistScreen = () => (
-  <favArtistStack.Navigator>
+  <favArtistStack.Navigator screenOptions={{
+      headerShown: false
+    }}
+  >
     <favArtistStack.Screen name = 'Favorite Artist' component = {favoriteArtists}/>
   </favArtistStack.Navigator>
 )
