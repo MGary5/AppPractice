@@ -42,7 +42,7 @@ import { NavigationContainer } from "@react-navigation/native";
     </ScreenContainer>
   )
 
-  export const favoriteArtists = () => (
+  export const FavoriteArtists = () => (
     <ScreenContainer>
       <ImageBackground style = {styles.background}>
         <View>
