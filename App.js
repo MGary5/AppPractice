@@ -15,7 +15,7 @@ const TabNav = createMaterialBottomTabNavigator();
 const HomeStackScreen = () => (
   <HomeStack.Navigator screenOptions={{headerShown: false}}>
     <HomeStack.Screen name = "Home Screen" component = {HomeScreen} />  
-    <HomeStack.Screen name = "Favorite Artists" component = {FavArtistScreen} options={{headerShown: true}}/>
+    <HomeStack.Screen name = "Favorite Artists" component = {FavArtistScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454"} }}/>
   </HomeStack.Navigator>
 );
 

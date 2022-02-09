@@ -85,13 +85,13 @@ import { NavigationContainer } from "@react-navigation/native";
       },
       buttonContainer: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 20,
+        alignItems: "flex-start",
+        justifyContent: "flex start",
+        padding: 40,
       },
       favArtists: {
         flexDirection: "row",
-        width: "70%",
+        width: "50%",
         height: "15%",
         justifyContent: "center",
         alignItems: "center",
