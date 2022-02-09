@@ -11,15 +11,19 @@ import {
     ImageComponent,
   } from "react-native";
 import { Style, Colors } from "../style/styles";
+import { NavigationContainer } from "@react-navigation/native";
 
 
-  export const HomeScreen = () => (
+  export const HomeScreen = ({navigation}) => (
       <ScreenContainer>
         <ImageBackground style = {styles.background}>
             <View style = {styles.buttonContainer}>
                 <TouchableOpacity
                     title = "Favorite Artists"
                     style = {styles.favArtists}
+                    onPress = {() => {
+                        navigation.push('Favorite Artists');
+                    }}
                 >
                     <Text style={styles.buttonText}>Favorite Artists</Text>
                 </TouchableOpacity>
@@ -35,6 +39,14 @@ import { Style, Colors } from "../style/styles";
         </View>
     </ScreenContainer>
   )
+
+  export const favoriteArtists = () => (
+    <ScreenContainer>
+        <View>
+      
+        </View>
+    </ScreenContainer>
+  );
 
   export const SettingScreen = () => (
     <ScreenContainer>
