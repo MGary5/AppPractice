@@ -2,11 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { HomeScreen } from './assets/Screens';
+import { HomeScreen, ProfileScreen, SettingScreen } from './assets/Screens';
 import { NavigationContainer } from "@react-navigation/native";
 
 
 const HomeStack = createNativeStackNavigator();
+const ProfileStack = createNativeStackNavigator();
+const SettingStack = createNativeStackNavigator();
+const TabNav = createMaterialBottomTabNavigator();
 
 const HomeStackScreen = () => (
   <HomeStack.Navigator>
@@ -14,19 +17,30 @@ const HomeStackScreen = () => (
   </HomeStack.Navigator>
 );
 
+const ProfileStackScreen = () => (
+  <ProfileStack.Navigator>
+    <ProfileStack.Screen name = 'Profile' component = {ProfileScreen}/>
+  </ProfileStack.Navigator>
+);
+
+const SettingStackScreen = () => (
+  <SettingStack.Navigator>
+    <SettingStack.Screen name = 'Settings' component = {SettingScreen}/>
+  </SettingStack.Navigator>
+);
+
+const TabScreen = () => (
+  <TabNav.Navigator>
+    <TabNav.Screen name = 'Home' component = {HomeStackScreen}/>
+    <TabNav.Screen name = 'Profile' component = {ProfileStackScreen}/>
+    <TabNav.Screen name = 'Settings' component = {SettingStackScreen}/>
+  </TabNav.Navigator>
+);
+
 export default function App() {
   return (
     <NavigationContainer>
-      <HomeStackScreen/>
+      <TabScreen/>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
