@@ -9,15 +9,13 @@ import {
     SafeAreaView,
     Image
   } from "react-native";
-import { Style, Colors } from "../style/styles";
-import { NavigationContainer } from "@react-navigation/native";
+import { Colors } from "../style/styles";
 import { ScrollView } from "react-native-gesture-handler";
-import { Ionicons } from "@expo/vector-icons";
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
   export const HomeScreen = ({navigation}) => (
       <ScreenContainer>
-        <ImageBackground style = {styles.background}>
+        <View style = {styles.background}>
             <View style = {styles.buttonContainer}>
                 <TouchableOpacity
                     title = "Favorite Artists"
@@ -29,7 +27,8 @@ import { Ionicons } from "@expo/vector-icons";
                     <Text style={styles.text, {fontSize: 20, }}>Favorite Artists</Text>
                 </TouchableOpacity>
             </View>
-        </ImageBackground>
+
+        </View>
       </ScreenContainer>
   )
 
@@ -38,7 +37,13 @@ import { Ionicons } from "@expo/vector-icons";
       <ScrollView showsVerticalScrollIndicator = {false}>
         
         {/* creates top margin for profile screen */}
-        <View style = {styles.profileTab}/>
+        <View style = {styles.profileTab}>
+          <MaterialCommunityIcons
+          name = 'cog'
+          color = {"#525252"}
+          size = {20}
+          />
+        </View>
         
         {/* importing/styling profile image */}
         <View style = {{alignSelf: "center"}}>
@@ -47,6 +52,19 @@ import { Ionicons } from "@expo/vector-icons";
             source = {require("./trollface.png")} 
             style = {styles.image}
             />
+          </View>
+        </View>
+
+        {/* Account Name */}
+        <View style = {{marginTop: 10}}>
+          <View style = {styles.accountBox}>
+            <Text style = {styles.text, {fontSize: 20}}>YummyTummyBoi</Text>
+          </View>
+        </View>
+
+        <View style = {{marginTop: 10}}>
+          <View style = {styles.accountBox}>
+            <Text style = {styles.text, {fontSize: 12}}>Ceaseleslly Drifting from one day to the next</Text>
           </View>
         </View>
         
@@ -192,8 +210,10 @@ import { Ionicons } from "@expo/vector-icons";
         width: undefined
       },
       profileTab: {
+        flexDirection: "row",
+        justifyContent: "flex-end",
         marginTop: 25,
-        marginHorizontal: 25
+        marginHorizontal: 20
       }
 
   })
