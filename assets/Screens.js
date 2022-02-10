@@ -36,9 +36,9 @@ import { Ionicons } from "@expo/vector-icons";
   export const ProfileScreen = () => (
     <SafeAreaView style = {styles.background}>
       <ScrollView showsVerticalScrollIndicator = {false}>
-        <View style = {styles.profileTab}>
 
-        </View>
+        <View style = {styles.profileTab}/>
+        
         <View style = {{alignSelf: "center"}}>
           <View style = {styles.profileImage}>
             <Image 
@@ -47,6 +47,44 @@ import { Ionicons } from "@expo/vector-icons";
             />
           </View>
         </View>
+        
+        <View style = {styles.profileContainer}>
+          <View style = {styles.accountBox}>
+            <Text style = {styles.text, {textFont: 15}}>Followers</Text>
+            <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>25</Text>
+          </View>
+          <View style = {styles.accountBox}>
+            <Text style = {styles.text, {textFont: 15}}>Discovered</Text>
+            <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>128</Text>
+          </View>
+          <View style = {styles.accountBox}>
+            <Text style = {styles.text, {textFont: 15}}>Recommended</Text>
+            <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>300</Text>
+          </View>
+        </View>
+      
+        <View>
+          <View style = {styles.profileContainer}>
+            <View style = {styles.profileBoxDisplays}>
+              <Text style = {styles.text, {textFont: 30}}>Dude this is my Third Recommendation!</Text>
+              <Text style = {styles.text, {textFont: 30}}>Myles Recommends Slaughterhouse by Ty Segall Band.</Text>
+
+            </View>
+          </View>
+          <View style = {styles.profileContainer}>
+            <View style = {styles.profileBoxDisplays}>
+              <Text style = {styles.text, {textFont: 30}}>Dude this is my second Recommendation!</Text>
+              <Text style = {styles.text, {textFont: 30}}>Myles Recommends Black Sabbath by Black Sabbath.</Text>
+            </View>
+          </View>
+          <View style = {styles.profileContainer}>
+            <View style = {styles.profileBoxDisplays}>
+              <Text style = {styles.text, {textFont: 30}}>Dude this is my first Recommendation!</Text>
+              <Text style = {styles.text, {textFont: 30}}>Myles Recommends The Sciences by Sleep.</Text>
+            </View>
+          </View>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -92,11 +130,42 @@ import { Ionicons } from "@expo/vector-icons";
         textAlign: "center",
         alignSelf: "auto",
       },
+      text: {
+        fontFamily: "HelveticaNeue",
+        color: "#999999"
+      },
+      profileBoxDisplays: {
+        flexDirection: "column",
+        alignItems: 'center',
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#525252",
+        paddingHorizontal: 20,
+        paddingVertical: 10
+      },
       buttonContainer: {
         flex: 1,
         alignItems: "flex-start",
         justifyContent: "flex start",
         padding: 40,
+      },
+      profileContainer: {
+        justifyContent: "space-evenly",
+        flexDirection: "row",
+        alignSelf: "stretch",
+        marginTop: 32
+      },
+      accountBox: {
+        justifyContent: "space-evenly",
+        flexDirection: "column",
+        alignText: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#525252",
+        marginRight: 15,
+        flex: 1
       },
       favArtists: {
         flexDirection: "row",
@@ -123,8 +192,6 @@ import { Ionicons } from "@expo/vector-icons";
         width: undefined
       },
       profileTab: {
-        flexDirection: "row",
-        justifyContent: "space-between",
         marginTop: 25,
         marginHorizontal: 25
       }
