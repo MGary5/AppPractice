@@ -4,14 +4,15 @@ import {
     View,
     Text,
     StyleSheet,
-    Button,
     ImageBackground,
     TouchableOpacity,
     SafeAreaView,
-    ImageComponent,
+    Image
   } from "react-native";
 import { Style, Colors } from "../style/styles";
 import { NavigationContainer } from "@react-navigation/native";
+import { ScrollView } from "react-native-gesture-handler";
+import { Ionicons } from "@expo/vector-icons";
 
 
   export const HomeScreen = ({navigation}) => (
@@ -33,20 +34,28 @@ import { NavigationContainer } from "@react-navigation/native";
   )
 
   export const ProfileScreen = () => (
-    <ScreenContainer>
-      <ImageBackground style = {styles.background}>
-        <View>
-      
+    <SafeAreaView style = {styles.background}>
+      <ScrollView showsVerticalScrollIndicator = {false}>
+        <View style = {styles.profileTab}>
+
         </View>
-      </ImageBackground>
-    </ScreenContainer>
-  )
+        <View style = {{alignSelf: "center"}}>
+          <View style = {styles.profileImage}>
+            <Image 
+            source = {require("./trollface.png")} 
+            style = {styles.image}
+            />
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 
   export const FavoriteArtists = () => (
     <ScreenContainer>
       <ImageBackground style = {styles.background}>
         <View>
-      
+
         </View>
       </ImageBackground>
     </ScreenContainer>
@@ -100,5 +109,24 @@ import { NavigationContainer } from "@react-navigation/native";
         paddingVertical: 10,
         marginVertical: 10,
         borderRadius: 5,
+      },
+      profileImage: {
+        height: 200,
+        width: 200,
+        borderRadius: 100,
+        overflow: "hidden"
+      },
+      image: {
+        flex: 1,
+        marginTop: 0,
+        height: undefined,
+        width: undefined
+      },
+      profileTab: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 25,
+        marginHorizontal: 25
       }
+
   })

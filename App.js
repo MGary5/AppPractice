@@ -47,7 +47,7 @@ const FavArtistScreen = () => (
 )
 
 const TabScreen = () => (
-  <TabNav.Navigator barStyle={{ backgroundColor: "#282828" }}>
+  <TabNav.Navigator root = {ProfileScreen} barStyle={{ backgroundColor: "#282828" }}>
     <TabNav.Screen name = 'Home' component = {HomeStackScreen} options = {{tabBarIcon: ({color, size}) => (
       <MaterialCommunityIcons
       name = "home"
