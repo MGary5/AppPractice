@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { FavoriteArtists, HomeScreen, ProfileScreen, SettingScreen } from './assets/Screens';
+import { FavoriteArtists, HomeScreen, ProfileScreen, ProfileSettingScreen, SettingScreen } from './assets/Screens';
 import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -10,6 +10,7 @@ const HomeStack = createNativeStackNavigator();
 const ProfileStack = createNativeStackNavigator();
 const SettingStack = createNativeStackNavigator();
 const FavArtistStack = createNativeStackNavigator();
+const ProfileSettingStack = createNativeStackNavigator();
 const TabNav = createMaterialBottomTabNavigator();
 
 const HomeStackScreen = () => (
@@ -25,7 +26,14 @@ const ProfileStackScreen = () => (
     }}
   >
     <ProfileStack.Screen name = 'Profile' component = {ProfileScreen}/>
+    <ProfileStack.Screen name = 'Profile Settings' component = {ProfileSettingStackScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454"} }}/>
   </ProfileStack.Navigator>
+);
+
+const ProfileSettingStackScreen = () => (
+  <ProfileSettingStack.Navigator screenOptions={{headerShown: false}}>
+    <ProfileSettingStack.Screen name = "Profile Settings" component = {ProfileSettingScreen}/>
+  </ProfileSettingStack.Navigator>
 );
 
 const SettingStackScreen = () => (
@@ -47,7 +55,7 @@ const FavArtistScreen = () => (
 )
 
 const TabScreen = () => (
-  <TabNav.Navigator root = {ProfileScreen} barStyle={{ backgroundColor: "#282828" }}>
+  <TabNav.Navigator barStyle={{ backgroundColor: "#282828" }}>
     <TabNav.Screen name = 'Home' component = {HomeStackScreen} options = {{tabBarIcon: ({color, size}) => (
       <MaterialCommunityIcons
       name = "home"

@@ -32,23 +32,22 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
       </ScreenContainer>
   )
 
-  export const ProfileScreen = () => (
+  export const ProfileScreen = ({navigation}) => (
     <SafeAreaView style = {styles.background}>
       <ScrollView showsVerticalScrollIndicator = {false}>
         
         {/* creates top margin for profile screen */}
         <View style = {styles.profileTab}>
           <TouchableOpacity
-            title = "Profile Settings"
             onPress = {() => {
-              navigation.push('Settings');
+              navigation.push('Profile Settings');
             }}
           >
-          <MaterialCommunityIcons
-          name = 'cog'
-          color = {"#525252"}
-          size = {20}
-          />
+            <MaterialCommunityIcons
+              name = 'cog'
+              color = {"#525252"}
+              size = {20}
+            />
           </TouchableOpacity>
         </View>
         
@@ -127,6 +126,16 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
       </ImageBackground>
     </ScreenContainer>
   );
+
+  export const ProfileSettingScreen = () => (
+    <ScreenContainer>
+        <ImageBackground style = {styles.background}>
+        <View>
+      
+        </View>
+      </ImageBackground>
+    </ScreenContainer>
+  )
 
   export const SettingScreen = () => (
     <ScreenContainer>
