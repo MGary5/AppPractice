@@ -26,7 +26,7 @@ import { Ionicons } from "@expo/vector-icons";
                         navigation.push('Favorite Artists');
                     }}
                 >
-                    <Text style={styles.buttonText}>Favorite Artists</Text>
+                    <Text style={styles.text, {fontSize: 20, }}>Favorite Artists</Text>
                 </TouchableOpacity>
             </View>
         </ImageBackground>
@@ -66,7 +66,7 @@ import { Ionicons } from "@expo/vector-icons";
           </View>
         </View>
       
-        {/* profile recommendations or really just boxes of text for profile page */}
+        {/* Activity Feed portion of profile */}
         <View>
           <View style = {styles.profileContainer}>
             <View style = {styles.profileBoxDisplays}>
@@ -120,11 +120,6 @@ import { Ionicons } from "@expo/vector-icons";
         height: "100%",
         backgroundColor: "#303030"
     },
-    itemContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        top: "45%",
-      },
       buttonText: {
         display: "flex",
         position: "relative",
@@ -149,8 +144,9 @@ import { Ionicons } from "@expo/vector-icons";
       },
       buttonContainer: {
         flex: 1,
+        alignText: "center",
         alignItems: "flex-start",
-        justifyContent: "flex start",
+        justifyContent: "flex-start",
         padding: 40,
       },
       profileContainer: {
