@@ -38,11 +38,18 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
         
         {/* creates top margin for profile screen */}
         <View style = {styles.profileTab}>
+          <TouchableOpacity
+            title = "Profile Settings"
+            onPress = {() => {
+              navigation.push('Settings');
+            }}
+          >
           <MaterialCommunityIcons
           name = 'cog'
           color = {"#525252"}
           size = {20}
           />
+          </TouchableOpacity>
         </View>
         
         {/* importing/styling profile image */}
