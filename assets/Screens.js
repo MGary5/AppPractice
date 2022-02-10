@@ -36,9 +36,11 @@ import { Ionicons } from "@expo/vector-icons";
   export const ProfileScreen = () => (
     <SafeAreaView style = {styles.background}>
       <ScrollView showsVerticalScrollIndicator = {false}>
-
+        
+        {/* creates top margin for profile screen */}
         <View style = {styles.profileTab}/>
         
+        {/* importing/styling profile image */}
         <View style = {{alignSelf: "center"}}>
           <View style = {styles.profileImage}>
             <Image 
@@ -48,6 +50,7 @@ import { Ionicons } from "@expo/vector-icons";
           </View>
         </View>
         
+        {/* Account details styling/editing */}
         <View style = {styles.profileContainer}>
           <View style = {styles.accountBox}>
             <Text style = {styles.text, {textFont: 15}}>Followers</Text>
@@ -63,6 +66,7 @@ import { Ionicons } from "@expo/vector-icons";
           </View>
         </View>
       
+        {/* profile recommendations or really just boxes of text for profile page */}
         <View>
           <View style = {styles.profileContainer}>
             <View style = {styles.profileBoxDisplays}>
