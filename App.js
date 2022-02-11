@@ -16,7 +16,7 @@ const TabNav = createMaterialBottomTabNavigator();
 const HomeStackScreen = () => (
   <HomeStack.Navigator screenOptions={{headerShown: false}}>
     <HomeStack.Screen name = "Home Screen" component = {HomeScreen} />  
-    <HomeStack.Screen name = "Favorite Artists" component = {FavArtistScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454"} }}/>
+    <HomeStack.Screen name = "Favorite Artists" component = {FavArtistScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454", borderBottomColor: "#545454"} }}/>
   </HomeStack.Navigator>
 );
 
@@ -26,7 +26,7 @@ const ProfileStackScreen = () => (
     }}
   >
     <ProfileStack.Screen name = 'Profile' component = {ProfileScreen}/>
-    <ProfileStack.Screen name = 'Profile Settings' component = {ProfileSettingStackScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454"} }}/>
+    <ProfileStack.Screen name = 'Profile Settings' component = {ProfileSettingStackScreen} options={{headerShown: true, headerStyle: {backgroundColor: "#545454", borderBottomColor: "#545454"} }}/>
   </ProfileStack.Navigator>
 );
 
@@ -55,16 +55,7 @@ const FavArtistScreen = () => (
 )
 
 const TabScreen = () => (
-  <TabNav.Navigator barStyle={{ backgroundColor: "#282828" }}>
-    <TabNav.Screen name = 'Home' component = {HomeStackScreen} options = {{tabBarIcon: ({color, size}) => (
-      <MaterialCommunityIcons
-      name = "home"
-      color = {color}
-      size = {20}
-      />
-      ), 
-    }}
-    />
+  <TabNav.Navigator barStyle={{ backgroundColor: "#282828"}}>
     <TabNav.Screen name = 'Profile' component = {ProfileStackScreen} options = {{tabBarIcon: ({color, size}) => (
           <MaterialCommunityIcons
           name = 'account'
@@ -73,6 +64,15 @@ const TabScreen = () => (
           />
         )
       }}
+    />
+    <TabNav.Screen name = 'Home' component = {HomeStackScreen} options = {{tabBarIcon: ({color, size}) => (
+      <MaterialCommunityIcons
+      name = "home"
+      color = {color}
+      size = {20}
+      />
+      ), 
+    }}
     />
     <TabNav.Screen name = 'Settings' component = {SettingStackScreen} options = {{tabBarIcon: ({color, size}) => (
           <MaterialCommunityIcons
