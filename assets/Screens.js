@@ -40,6 +40,17 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
         <View style = {styles.profileTab}>
           <TouchableOpacity
             onPress = {() => {
+              navigation.push("");
+            }}
+          >
+            <MaterialCommunityIcons
+              name = 'message-plus'
+              color = {"#525252"}
+              size = {20}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress = {() => {
               navigation.push('Profile Settings');
             }}
           >
@@ -76,18 +87,18 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
         
         {/* Account details styling/editing */}
         <View style = {styles.profileContainer}>
-          <View style = {styles.accountBox}>
+          <TouchableOpacity style = {styles.accountBox}>
             <Text style = {styles.text, {textFont: 15}}>Followers</Text>
             <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>25</Text>
-          </View>
-          <View style = {styles.accountBox}>
+          </TouchableOpacity>
+          <TouchableOpacity style = {styles.accountBox}>
             <Text style = {styles.text, {textFont: 15}}>Discovered</Text>
             <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>128</Text>
-          </View>
-          <View style = {styles.accountBox}>
+          </TouchableOpacity>
+          <TouchableOpacity style = {styles.accountBox}>
             <Text style = {styles.text, {textFont: 15}}>Recommended</Text>
             <Text style = {styles.text, {textFont: 15, fontWeight: "bold"}}>300</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       
         {/* Activity Feed portion of profile */}
@@ -192,9 +203,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
       accountBox: {
         justifyContent: "space-evenly",
         flexDirection: "column",
-        alignText: "center",
         alignItems: "center",
-        alignSelf: "center",
         width: "100%",
         height: "100%",
         backgroundColor: "#525252",
@@ -227,7 +236,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
       },
       profileTab: {
         flexDirection: "row",
-        justifyContent: "flex-end",
+        justifyContent: "space-between",
         marginTop: 25,
         marginHorizontal: 20
       }
