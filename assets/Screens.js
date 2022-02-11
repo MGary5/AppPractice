@@ -70,7 +70,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
         <View style = {{marginTop: 10}}>
           <View style = {styles.accountBox}>
-            <Text style = {styles.text, {fontSize: 12}}>Ceaseleslly Drifting from one day to the next</Text>
+            <Text style = {styles.text, {fontSize: 12}}>Ceaseleslly drifting from one day to the next</Text>
           </View>
         </View>
         
